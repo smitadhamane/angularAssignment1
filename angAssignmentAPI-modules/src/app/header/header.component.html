@@ -1,0 +1,9 @@
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+    <h3 class="navbar-brand mb-0" href="#">Employee - Custmors Record</h3>
+      <a class="nav-link text-white ml-auto mr-3" routerLink="/home">Home </a>
+    <button class="btn btn-outline-warning" *ngIf = "!isLogin" routerLink="/login" >LOGIN</button>
+    <button class="btn btn-outline-danger" *ngIf = "isLogin"  (click) = "logOut()">LOGOUT</button>
+</div>
+</nav>

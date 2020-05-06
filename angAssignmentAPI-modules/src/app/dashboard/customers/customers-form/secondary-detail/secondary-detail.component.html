@@ -1,0 +1,31 @@
+<h5 class="alert-info p-3">Secondary Details</h5>
+       <form #secondaryDetails="ngForm" class="editForm p-3" (ngSubmit) = "onSubmitSecondary(secondaryDetails)">
+ 
+     
+                        <div class="form-group">
+                            <label class="control-label" for="firstname">Address</label>  
+                            <input class="form-control" [(ngModel)] = "address"  required name="Address" type="text" placeholder="Address" #add = "ngModel">   
+                            <div *ngIf="add.touched && !add.valid" class="text-danger">
+                                Address is required
+                              </div>
+                        </div>
+                 
+                   
+                        <div class="form-group">
+                            <label class="control-label" for="lastname">Total Order	</label>  
+                            <input class="form-control" [pattern] = "orderPattern" [(ngModel)] ="order" required name="order_total" type="text" placeholder="Total Order" #torder = "ngModel">
+                            <div *ngIf="torder.touched && !torder.valid && !order" class="text-danger">
+                                Total Order is required
+                              </div>
+                              <div *ngIf="!torder.valid && torder.touched && torder.errors.pattern" class="text-danger">
+                               Please Enter Valid order in numbers.
+                              </div>
+                        </div>
+            
+           
+                    
+                <div class="form-group text-center">
+                    <button class="btn btn-primary w-25" [disabled] = "!secondaryDetails.valid">Next</button>
+                </div>
+   
+</form>

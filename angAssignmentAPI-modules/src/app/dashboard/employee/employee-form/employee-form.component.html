@@ -1,0 +1,52 @@
+<div class="container"><div class="row justify-content-center">
+    <div class="col-sm-6">
+
+
+<form [formGroup]="employeeForm" (ngSubmit)="formData()" class="shadow p-3">
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input class="form-control" name="firstname" [(ngModel)] = "firstname" id="firstname" type="text"
+     formControlName="firstname">
+     <div *ngIf = "employeeForm.get('firstname').touched && !employeeForm.get('firstname').valid" class="text-danger">Please Enter First Name</div>
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input class="form-control" name="lastname" id="lastname" type="text" [(ngModel)] = "lastname"
+     formControlName="lastname">
+     <div *ngIf = "employeeForm.get('lastname').touched && !employeeForm.get('lastname').valid" class="text-danger">Please Enter Last Name</div>
+  </div>
+  <div class="form-group">
+    <label for="birthdate">Birth Date</label>
+    <input class="form-control" type="date" name = "birthdate"  [(ngModel)] = "birthdate"
+    formControlName="birthdate"
+    />
+    <div *ngIf = "employeeForm.get('birthdate').touched && !employeeForm.get('birthdate').valid" class="text-danger">Please Select your Birth Date</div>
+  </div>
+  <div class="form-group">
+      <p class="mb-1">Gender</p>
+    <input type="radio" id="male" name="gender" value="male" formControlName = "gender"  [(ngModel)] = "gender">
+  <label for="male" class="ml-2">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female" formControlName = "gender"  [(ngModel)] = "gender">
+  <label for="female" class="ml-2">Female</label><br>
+  <div *ngIf = "employeeForm.get('gender').touched && !employeeForm.get('gender').valid" class="text-danger">Please Select your Birth Date</div>
+ 
+  </div>
+
+
+  <div class="form-group">
+    <select class="form-control"  formControlName="bloodGrp" name="bloodGrp"
+    (change)="selectChangeHandler($event)"  [(ngModel)] = "bloodGrp"
+    >
+        <option value="null" disabled>Choose your city</option>
+      <option *ngFor="let bg of bloodGroup" [ngValue]="bg">{{bg}}</option>
+    </select>
+
+    <div *ngIf = "employeeForm.get('bloodGrp').touched && !this.selectedBG" class="text-danger">Please Select your Birth Date</div>
+ 
+  </div> 
+
+<button type="submit" class="btn btn-info"  [disabled]="!employeeForm.valid" >Submit</button>
+</form>
+</div>
+</div>
+ </div>

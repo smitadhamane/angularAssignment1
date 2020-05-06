@@ -1,0 +1,49 @@
+{
+  "customers": [
+    {
+      "firstname": "smita J",
+      "lastname": "dhamne",
+      "Address": "parner",
+      "order_total": "100",
+      "mobile": "3264576354",
+      "email": "djfkks@jhfjs",
+      "id": 9
+    },
+    {
+      "firstname": "smita",
+      "lastname": "dhamne",
+      "Address": "parner",
+      "order_total": "100",
+      "mobile": "5765756575",
+      "email": "djfkks@jhfjs",
+      "id": 12
+    },
+    {
+      "firstname": "smita",
+      "lastname": "jadhav",
+      "Address": "Parner",
+      "order_total": "1000000",
+      "mobile": "7327434744",
+      "email": "djfkks@jhfjs",
+      "id": 14
+    },
+    {
+      "firstname": "smita",
+      "lastname": "raet",
+      "Address": "parner",
+      "order_total": "100",
+      "mobile": "5787475454",
+      "email": "djfkks@jhfjs",
+      "id": 15
+    },
+    {
+      "firstname": "rohan",
+      "lastname": "dhamane",
+      "Address": "parner",
+      "order_total": "1000",
+      "mobile": "5656656656",
+      "email": "fddddddg@fjfd",
+      "id": 16
+    }
+  ]
+}
