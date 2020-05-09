@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ng-touched {
+    border : 1px solid red;
+    box-shadow: 0 0 0 0.2rem rgba(255,0,0,.1);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+$blue :darkblue;
+$bgColor: #e7f3f7;
+$fontSize:17px;
+$bgInfo: darkblue;
+body{
+    background-color: $bgColor;
+}
+.btn-primary {
+background-color: $blue;
+font-size:$fontSize;
+
+&:hover {
+    background-color: $blue;  
+}
+
+}
+.bg-info {
+    background-color: $bgInfo !important;
+}

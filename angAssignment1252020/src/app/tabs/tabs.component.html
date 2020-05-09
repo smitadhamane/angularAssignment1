@@ -1,0 +1,8 @@
+<div class="container py-4" *ngIf = "!isLogin">
+    <button class="btn mr-4 border-blue" routerLink="/customers"  *ngIf = "isAdmin()"
+    
+    routerLinkActive="btn-primary" (click) = "addClass()" >Customers</button>
+    <button class="btn border-blue" routerLink="/employee"  *ngIf = "isAdmin()"
+     routerLinkActive="btn-primary"   (click) = "addClass()">Employee</button>
+</div>
+<router-outlet></router-outlet>

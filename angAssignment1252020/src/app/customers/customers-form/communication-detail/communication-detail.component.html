@@ -1,0 +1,37 @@
+<h5 class="alert-info p-3">Communication Details</h5>
+       <form  #commDetails="ngForm" class="editForm p-3"  (ngSubmit) = "commData(commDetails)">
+ 
+     
+                        <div class="form-group">
+                            <label class="control-label" for="firstname">Mobile Number</label>  
+                            <input class="form-control" [(ngModel)]= "mobile" [pattern] = "mobNumberPattern" required name="mobile" type="tel" 
+                            placeholder="Mobile Number" #num = "ngModel" maxlength="10" minlength="10">   
+                          
+                            <div *ngIf="num.touched && !num.valid && !mobile "  class="text-danger">
+                                Mobile Number is required
+                                 
+                            </div>
+                            <div *ngIf="!num.valid && num.touched && num.errors.pattern" class="text-danger">
+                                Please Enter valid Mobile Number !
+                                </div>
+                        </div>
+                 
+                   
+                        <div class="form-group">
+                            <label class="control-label" for="lastname">Email ID	</label>  
+                            <input class="form-control " [(ngModel)]= "email" [pattern] = "emailpattern" required name="email" type="email" placeholder="Email ID" #em = "ngModel">
+                            <div *ngIf="em.touched && !em.valid && !email" class="text-danger">
+                                Email ID is required
+                            </div> 
+                            <div *ngIf="!em.valid && em.touched && em.errors.pattern" class="text-danger">
+                               Please Enter valid Email Adress !
+                                </div>
+                        </div>
+            
+           
+                    
+                <div class="form-group text-center">
+                    <button class="btn btn-primary w-25" [disabled] = "!commDetails.valid">Save</button>
+                </div>
+   
+</form>

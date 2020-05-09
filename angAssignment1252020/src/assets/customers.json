@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "firstname": "smita",
+      "lastname": "dhamne",
+      "Address": "parner",
+      "order_total": "100",
+      "mobile": "5765756575",
+      "email": "djfkks@jhfjs",
+      "id": 12
+    },
+    {
+      "firstname": "smita",
+      "lastname": "jadhav",
+      "Address": "Parner",
+      "order_total": "1000000",
+      "mobile": "7327434744",
+      "email": "djfkks@jhfjs",
+      "id": 14
+    },
+    {
+      "firstname": "rohan",
+      "lastname": "dhamne",
+      "Address": "nagar",
+      "order_total": "122",
+      "mobile": "7327434744",
+      "email": "djfkks@jhfjs",
+      "id": 15
+    },
+    {
+      "firstname": "bharat",
+      "lastname": "dhamne",
+      "Address": "nagar",
+      "order_total": "1000000",
+      "mobile": "7327434744",
+      "email": "djfkks@jhfjs",
+      "id": 16
+    }
+  ]
+}
