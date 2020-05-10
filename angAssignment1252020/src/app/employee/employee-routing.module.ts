@@ -11,12 +11,7 @@ const routes: Routes = [
     path: '',
     component: EmployeeComponent,
     canActivate : [AuthguardGuard],
-    data: {
-      roles: [
-        Role.admin,
-        Role.employee
-      ]
-    },
+  
     children: [
       { path: '', redirectTo: 'employee-list', pathMatch: 'full' }, 
      { path: 'employee-list', component: EmployeeListComponent},

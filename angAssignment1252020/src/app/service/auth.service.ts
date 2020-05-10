@@ -20,9 +20,6 @@ loginURL = "http://localhost:5000/logindetails";
     private loginservice: LoginService, private http: HttpClient ) {
       
      }
-
-
-  
  isAuthenticated() {
   // get the auth token from localStorage
   let token = localStorage.getItem('access_token');
@@ -34,11 +31,16 @@ console.log(token);
   }
   return false;
 }
-
-hasRole(role: Role) {
-  let token = localStorage.getItem('access_token');
-  return this.isAuthenticated() && role === token;
+access_control =  {
+	admin :
+			["/customers/customers-list", "/employee/employee-list"],
+	customer :	
+			["/customers/customers-list"],
+	employee :
+		["/employee/employee-list"]
 }
+
+
 isAdmin() {
   console.log(this.userRole);
   
